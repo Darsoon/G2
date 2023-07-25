@@ -5,7 +5,7 @@ export function weatherLineRepeatMatrixCol(): G2Spec {
     type: 'repeatMatrix',
     width: 300,
     height: 720,
-    paddingLeft: 50,
+    paddingLeft: 60,
     paddingBottom: 60,
     data: {
       type: 'fetch',

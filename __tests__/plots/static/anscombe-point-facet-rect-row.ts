@@ -5,7 +5,8 @@ export function anscombePointFacetRectRow(): G2Spec {
     type: 'facetRect',
     width: 928,
     height: 270,
-    paddingBottom: 50,
+    paddingLeft: 60,
+    paddingBottom: 60,
     data: {
       type: 'fetch',
       value: 'data/anscombe.csv',

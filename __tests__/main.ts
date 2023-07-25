@@ -166,11 +166,7 @@ function createSpecRender(object) {
       window.__g_instances__ = [canvas];
       const renderChart = mounted ? renderToMountedElement : render;
       before?.();
-      const node = renderChart(
-        { theme: 'classic', ...options },
-        { canvas },
-        () => after?.(),
-      );
+      const node = renderChart(options, { canvas }, () => after?.());
 
       // Append nodes.
       if (node instanceof HTMLElement) container.append(node);

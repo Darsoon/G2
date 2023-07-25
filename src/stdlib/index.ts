@@ -116,7 +116,7 @@ import {
   Heatmap as HeatmapShape,
   Trail,
 } from '../shape';
-import { Classic, ClassicDark, Academy } from '../theme';
+import { Classic, ClassicDark, Academy, Light } from '../theme';
 import {
   AxisLinear,
   AxisArc,
@@ -445,6 +445,7 @@ export function createLibrary(): G2Library {
     'theme.classic': Classic,
     'theme.classicDark': ClassicDark,
     'theme.academy': Academy,
+    'theme.light': Light,
     'component.axisX': AxisX,
     'component.axisY': AxisY,
     'component.axisRadar': AxisRadar,

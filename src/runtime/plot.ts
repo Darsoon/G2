@@ -1488,7 +1488,7 @@ function createExitFunction(
 
 function inferTheme(theme: G2ThemeOptions = {}): G2ThemeOptions {
   if (typeof theme === 'string') return { type: theme };
-  const { type = 'classic', ...rest } = theme;
+  const { type = 'light', ...rest } = theme;
   return { ...rest, type };
 }
 

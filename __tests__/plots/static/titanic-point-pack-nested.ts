@@ -21,7 +21,7 @@ export function titanicPointPackNested(): G2Spec {
       ],
     },
     paddingRight: 50,
-    paddingBottom: 50,
+    paddingBottom: 60,
     paddingLeft: 80,
     encode: {
       y: 'pclass',

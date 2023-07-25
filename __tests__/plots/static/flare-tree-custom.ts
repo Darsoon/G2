@@ -5,6 +5,7 @@ export async function flareTreeCustom(): Promise<G2Spec> {
     type: 'view',
     width: 800,
     height: 1500,
+    paddingLeft: 40,
     coordinate: { transform: [{ type: 'transpose' }] },
     children: [
       {

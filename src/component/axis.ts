@@ -2,7 +2,7 @@ import { Coordinate } from '@antv/coord';
 import type { DisplayObject } from '@antv/g';
 import { Axis as AxisComponent } from '@antv/gui';
 import { Linear as LinearScale } from '@antv/scale';
-import { deepMix, has, omit } from '@antv/util';
+import { deepMix, omit, upperFirst } from '@antv/util';
 import { extent } from 'd3-array';
 import { format } from 'd3-format';
 import {
@@ -304,15 +304,15 @@ function inferAxisLinearOverrideStyle(
     // axisY
     if (orientation === 'vertical') {
       return {
-        startPos: [x + width, y],
-        endPos: [x + width, y + height],
+        startPos: [x, y],
+        endPos: [x, y + height],
       };
     }
     // axisX
     else if (orientation === 'horizontal') {
       return {
-        startPos: [x, y + height],
-        endPos: [x + width, y + height],
+        startPos: [x, y],
+        endPos: [x + width, y],
       };
     }
     // axis with rotate
@@ -426,7 +426,7 @@ const ArcAxisComponent: GCC<AxisOptions> = (options) => {
       // @fixme transform is not valid for arcAxis.
       // @ts-ignore
       style: omit(finalStyle, ['transform']),
-    });
+    }) as unknown as DisplayObject;
   };
 };
 
@@ -439,12 +439,12 @@ function inferThemeStyle(
   orientation: GCO,
 ) {
   const baseStyle = theme.axis;
-  let furtherStyle = theme.axisLinear;
-
-  if (['top', 'right', 'bottom', 'left'].includes(position)) {
-    furtherStyle = theme[`axis${capitalizeFirst(position)}`];
-  }
-  return Object.assign({}, baseStyle, furtherStyle);
+  const positionStyle = ['top', 'right', 'bottom', 'left'].includes(position)
+    ? theme[`axis${capitalizeFirst(position)}`]
+    : theme.axisLinear;
+  const channel = scale.getOptions().name;
+  const channelStyle = theme[`axis${upperFirst(channel)}`] || {};
+  return Object.assign({}, baseStyle, positionStyle, channelStyle);
 }
 
 function inferDefaultStyle(
@@ -573,7 +573,7 @@ const LinearAxisComponent: GCC<AxisOptions> = (options) => {
     return new AxisComponent({
       className: 'axis',
       style: adaptor(finalAxisStyle),
-    });
+    }) as unknown as DisplayObject;
   };
 };
 
@@ -617,6 +617,8 @@ LinearAxis.props = {
   defaultPosition: 'center',
   defaultSize: 45,
   defaultOrder: 0,
+  defaultCrossPadding: [12, 12],
+  defaultPadding: [12, 12],
 };
 
 ArcAxis.props = {
@@ -624,4 +626,6 @@ ArcAxis.props = {
   defaultOrientation: 'vertical',
   defaultSize: 45,
   defaultOrder: 0,
+  defaultCrossPadding: [12, 12],
+  defaultPadding: [12, 12],
 };
