@@ -23,7 +23,6 @@ function* insertionSort(arr) {
 
 const chart = new Chart({
   container: 'container',
-  theme: 'classic',
 });
 
 const keyframe = chart.timingKeyframe();

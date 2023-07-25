@@ -10,6 +10,7 @@ export function chartOnFocusContext(context) {
   const focusView = new Chart({
     container: focusContainer,
     canvas: canvas1,
+    paddingLeft: 60,
   });
 
   focusView.options({
@@ -31,6 +32,7 @@ export function chartOnFocusContext(context) {
   const contextView = new Chart({
     container: contextContainer,
     canvas: canvas2,
+    paddingLeft: 60,
   });
 
   contextView.options({

@@ -7,7 +7,6 @@ const data = [
 
 const chart = new Chart({
   container: 'container',
-  theme: 'classic',
   width: 480,
   height: 80,
   padding: 8,

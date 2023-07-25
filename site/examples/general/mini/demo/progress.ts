@@ -4,7 +4,6 @@ const progress = 0.7;
 
 const chart = new Chart({
   container: 'container',
-  theme: 'classic',
   width: 480,
   height: 60,
   padding: 8,

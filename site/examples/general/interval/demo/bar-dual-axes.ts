@@ -5,10 +5,8 @@ const left = (d) => d.end > -1500 && d.start > -3000;
 
 const chart = new Chart({
   container: 'container',
-  theme: 'classic',
   width: 900,
   height: 1000,
-  paddingRight: 80,
 });
 
 chart.coordinate({ transform: [{ type: 'transpose' }] });

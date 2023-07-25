@@ -6,10 +6,8 @@ import { squares } from '@antv/g-pattern';
 
 const chart = new Chart({
   container: 'container',
-  theme: 'classic',
   width: 500,
   height: 400,
-  paddingLeft: 50,
 });
 
 chart.coordinate({ type: 'theta', innerRadius: 0.25, outerRadius: 0.8 });

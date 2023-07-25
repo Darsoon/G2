@@ -17,7 +17,6 @@ const linkData = (data) =>
 
 const chart = new Chart({
   container: 'container',
-  theme: 'classic',
   autoFit: true,
 });
 

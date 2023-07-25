@@ -2,7 +2,6 @@ import { Chart } from '@antv/g2';
 
 const chart = new Chart({
   container: 'container',
-  theme: 'classic',
   autoFit: true,
 });
 
@@ -42,7 +41,8 @@ chart
       fill: '#1890ff',
       stroke: '#fff',
     },
-  });
+  })
+  .legend('size', false);
 
 chart
   .lineY()

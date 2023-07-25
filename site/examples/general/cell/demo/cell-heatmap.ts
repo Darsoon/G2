@@ -5,10 +5,8 @@ import { Chart } from '@antv/g2';
 
 const chart = new Chart({
   container: 'container',
-  theme: 'classic',
-  width: 1152,
-  height: 780,
-  paddingLeft: 60,
+  width: 1300,
+  height: 900,
 });
 
 chart

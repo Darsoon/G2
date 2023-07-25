@@ -16,6 +16,7 @@ export interface GeoPath extends Mark, Composition {
   encode: ObjectAttribute<GeoPathSpec['encode'], GeoPath>;
   legend: ObjectAttribute<GeoPathSpec['legend'], GeoPath>;
   state: ObjectAttribute<GeoPathSpec['state'], GeoPath>;
+  animate: ObjectAttribute<GeoPathSpec['animate'], GeoPath>;
 }
 
 @defineProps([
@@ -28,6 +29,7 @@ export interface GeoPath extends Mark, Composition {
   { type: 'object', name: 'encode' },
   { type: 'object', name: 'legend' },
   { type: 'object', name: 'state' },
+  { type: 'object', name: 'animate' },
   ...nodeProps(mark),
 ])
 export class GeoPath extends CompositionNode<GeoPathComposition> {

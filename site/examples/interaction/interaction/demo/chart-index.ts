@@ -2,8 +2,6 @@ import { Chart } from '@antv/g2';
 
 const chart = new Chart({
   container: 'container',
-  theme: 'classic',
-  paddingLeft: 50,
 });
 
 chart
@@ -27,13 +25,15 @@ chart
     },
   });
 
-chart.interaction('chartIndex', {
-  ruleStroke: '#aaa',
-  labelDx: 5,
-  labelTextAlign: 'center',
-  labelStroke: '#fff',
-  labelLineWidth: 5,
-  labelFormatter: (d) => `${d.toLocaleDateString()}`,
-});
+chart
+  .interaction('chartIndex', {
+    ruleStroke: '#aaa',
+    labelDx: 5,
+    labelTextAlign: 'center',
+    labelStroke: '#fff',
+    labelLineWidth: 5,
+    labelFormatter: (d) => `${d.toLocaleDateString()}`,
+  })
+  .interaction('tooltip', false);
 
 chart.render();

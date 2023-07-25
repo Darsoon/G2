@@ -5,7 +5,6 @@ const random = randomPoisson(Math.pow(10, 2.6));
 
 const chart = new Chart({
   container: 'container',
-  theme: 'classic',
   autoFit: true,
 });
 

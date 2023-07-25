@@ -7,7 +7,6 @@ const chart = new Chart({
   container: 'container',
   width: 500,
   height: 400,
-  paddingLeft: 50,
 });
 
 chart

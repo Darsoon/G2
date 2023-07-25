@@ -9,7 +9,6 @@ WebFont.load({
   active: () => {
     const chart = new Chart({
       container: 'container',
-      theme: 'classic',
       autoFit: true,
       paddingLeft: 60,
       plugins: [new Plugin()],
