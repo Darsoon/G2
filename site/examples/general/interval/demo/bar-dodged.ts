@@ -8,6 +8,11 @@ const chart = new Chart({
   autoFit: true,
 });
 
+chart.title({
+  title: 'Population by age and state',
+  subtitle: 'It shows the population of U.S. by age and state.',
+});
+
 chart
   .interval()
   .data({
@@ -21,6 +26,7 @@ chart
   .encode('x', 'state')
   .encode('y', 'population')
   .encode('color', 'age')
+  .scale('y', { nice: true })
   .axis('y', { labelFormatter: '~s' });
 
 chart
