@@ -19,7 +19,6 @@ export function chartEmitElementHighlight(context) {
   const chart = new Chart({
     theme: 'classic',
     container: wrapperDiv,
-    padding: 'auto',
     canvas,
   });
 

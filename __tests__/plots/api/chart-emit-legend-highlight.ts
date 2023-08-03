@@ -24,7 +24,6 @@ export function chartEmitLegendHighlight(context) {
   });
 
   chart.options({
-    paddingLeft: 60,
     type: 'interval',
     data: profit,
     axis: { y: { labelFormatter: '~s' } },

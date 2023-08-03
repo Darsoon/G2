@@ -19,8 +19,6 @@ export function chartEmitSliderFilter(context) {
   const chart = new Chart({
     theme: 'classic',
     container: wrapperDiv,
-    paddingLeft: 80,
-    paddingBottom: 120,
     canvas,
   });
 

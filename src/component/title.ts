@@ -106,4 +106,6 @@ TitleComponent.props = {
   defaultPosition: 'top',
   defaultOrder: 2,
   defaultSize: 36,
+  defaultCrossPadding: [20, 20],
+  defaultPadding: [12, 12],
 };

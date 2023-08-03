@@ -15,7 +15,6 @@ export function chartChangeSize(context) {
     theme: 'classic',
     container: div,
     canvas,
-    padding: 'auto',
   });
 
   chart.data([

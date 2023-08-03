@@ -19,7 +19,6 @@ export function chartEmitElementSelect(context) {
   const chart = new Chart({
     theme: 'classic',
     container: wrapperDiv,
-    padding: 'auto',
     canvas,
   });
 

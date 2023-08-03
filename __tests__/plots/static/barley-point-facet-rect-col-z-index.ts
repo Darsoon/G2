@@ -12,8 +12,8 @@ export async function barleyPointFacetRectColZIndex(): Promise<G2Spec> {
     encode: {
       y: 'site',
     },
-    paddingLeft: 130,
-    paddingRight: 120,
+    paddingLeft: 140,
+    paddingRight: 130,
     paddingBottom: 60,
     scale: {
       y: {
